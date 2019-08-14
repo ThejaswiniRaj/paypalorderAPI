@@ -1,11 +1,15 @@
 package com.paypal.orders.base;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+
+
 import static com.jayway.restassured.RestAssured.*; 
 
 public class TestBase {
@@ -13,9 +17,12 @@ public class TestBase {
 	String path="C:\\jansi_javafiles_2\\paypal_practice\\src\\main\\java\\com\\paypal\\properties\\client.properties";
 	public Properties prop;
 	
-	@BeforeMethod
-	public void init() throws IOException
+	
+	
+	
+	public TestBase() 
 	{
+		
 		try
 		{
 		FileInputStream ip=new FileInputStream(path);
@@ -24,12 +31,18 @@ public class TestBase {
 		
 		}
 		
-		catch(Exception e)
+		catch( FileNotFoundException e)
+		{
+			e.printStackTrace();
+			
+		}
+		catch(IOException e)
 		{
 			e.printStackTrace();
 		}
 		
 		}
+	
 	
 	
 	public String accesstoken()
@@ -48,6 +61,10 @@ public class TestBase {
 		
 		//System.out.println("Access token is :"+accesstoken);
 		return accesstoken;
+		
+		
+		
+		
 	}
 	
 	

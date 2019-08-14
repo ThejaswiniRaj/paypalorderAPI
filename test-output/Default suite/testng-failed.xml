@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.paypal.orders.tests.createorder">
+      <class name="com.paypal.orders.tests.showorder">
         <methods>
-          <include name="extractid"/>
-          <include name="initialization"/>
-          <include name="init"/>
+          <include name="showinit"/>
+          <include name="showorderresponse"/>
         </methods>
-      </class> <!-- com.paypal.orders.tests.createorder -->
+      </class> <!-- com.paypal.orders.tests.showorder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

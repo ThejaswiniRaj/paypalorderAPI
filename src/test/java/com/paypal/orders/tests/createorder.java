@@ -18,9 +18,16 @@ public class createorder extends TestBase{
 	String accesstoken;
 	RequestSpecification spec;
 	Response createorder_response;
+	
+	public createorder()
+	{
+		super();
+	}
+	
 	@BeforeMethod
 	public void initialization()
 	{
+		
 		 accesstoken=accesstoken();
 		 RequestSpecBuilder builder=new RequestSpecBuilder();
 		 builder.setBaseUri(prop.getProperty("baseuri"));
@@ -33,10 +40,14 @@ public class createorder extends TestBase{
 		
 	}
 	
-	public Response createorder()
+	 
+	
+	public Response createorders()
 	{
 		resourcebuilder resource=new resourcebuilder();
 		post_obj pojo=resource.resourcebuild();
+	
+		
 		
 		 createorder_response=given()
 		.spec(spec)
@@ -58,9 +69,9 @@ public class createorder extends TestBase{
 			
 		}
 		@Test
-		public void assertion()
+		public void createorderassertion()
 		{
-			Response res=createorder();
+			Response res=createorders();
 			String id=extractid(res);
 			System.out.println("createorderid is:"+id);
 			System.out.println("Response is:"+res.asString());
