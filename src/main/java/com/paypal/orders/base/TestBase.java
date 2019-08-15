@@ -8,7 +8,9 @@ import java.util.Properties;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
+import com.jayway.restassured.builder.RequestSpecBuilder;
+import com.jayway.restassured.http.ContentType;
+import com.jayway.restassured.specification.RequestSpecification;
 
 import static com.jayway.restassured.RestAssured.*; 
 
@@ -17,7 +19,10 @@ public class TestBase {
 	String path="C:\\jansi_javafiles_2\\paypal_practice\\src\\main\\java\\com\\paypal\\properties\\client.properties";
 	public Properties prop;
 	public static String accesstoken;
-	
+	 public static RequestSpecification spec;
+	 //initializing as public,so that child class can see the var
+	 //initializing as static,so that value of that variable remains same in all child classes and it cannot be duplicated or changed in other child classes.
+	//spec in all child class points to base class spec,so that dont declare class level in inherited child classes.
 	
 	
 	
@@ -66,6 +71,16 @@ public class TestBase {
 		
 		
 		
+	}
+	public RequestSpecification  RequestSpecBuilder()
+	{
+		RequestSpecBuilder builder=new RequestSpecBuilder();
+		 builder.setBaseUri(prop.getProperty("baseuri"));
+		 builder.setBasePath(prop.getProperty("basepath"));
+		 builder.setContentType(ContentType.JSON);
+		  spec= builder.build();
+		  return spec;
+		 
 	}
 	
 	

@@ -1,20 +1,33 @@
 package com.paypal.orders.tests;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.http.ContentType;
+import com.jayway.restassured.internal.mapper.ObjectMapperType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import com.paypal.orders.base.TestBase;
+import com.paypal.showorder_resourcebuilder.links;
+import com.paypal.showorder_resourcebuilder.purchase_units;
+import com.paypal.showorder_resourcebuilder.showorder_obj;
+
+import junit.framework.Assert;
+
 import static com.jayway.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+import java.util.List;
 
 public class showorder extends TestBase {
 	
 	String orderid;
-	RequestSpecification spec;
-	 //String accesstoken;
+	//RequestSpecification spec;
+	//dont initialize spec as class variable bcz,this value is fetched from base class
+	Response showorder_response;
+	
 	
 	
 	
@@ -28,38 +41,115 @@ public class showorder extends TestBase {
 	public void showinit()
 	{
 		accesstoken=accesstoken();
+		 spec  =RequestSpecBuilder();
 		
 		createorder co=new createorder();
 		Response createorder_response=co.createorders();
 		 orderid=co.extractid(createorder_response);
-		/* RequestSpecBuilder builder=new RequestSpecBuilder();
-		 builder.setBaseUri(prop.getProperty("baseuri"));
-		 builder.setBasePath(prop.getProperty("basepath"));
-		 builder.setContentType(ContentType.JSON);
-		  spec= builder.build();*/
-		
+		 
 		
 		  
 		
 	}
 	
-	@Test
-	public void showorderresponse()
+	
+	public Response showorderresponse()
 	{
-		given()
-		.baseUri(prop.getProperty("baseuri"))
-		.basePath(prop.getProperty("basepath"))
-		.contentType(ContentType.JSON)
+		 showorder_response=given()
+		//.baseUri(prop.getProperty("baseuri"))
+		//.basePath(prop.getProperty("basepath"))
+		//.contentType(ContentType.JSON)
+		 .spec(spec)
 		.auth()
 		.oauth2(accesstoken)
 		.when()
-		.get("/checkout/orders/"+orderid)
-		.then()
-		.log()
-		.all();
+		.get("/checkout/orders/"+orderid);
+		return  showorder_response;
 		
 		
 		
 	}
+	@Test
+	public void parsingthrumappingtoclass()
+	{
+		Response showorder_response=showorderresponse();
+		showorder_obj showorderpojo=showorder_response.as(showorder_obj.class, ObjectMapperType.GSON);
+		System.out.println("fetching value of simple member variables");
+		System.out.println("value of intent is:"+showorderpojo.getIntent());
+		String intent=showorderpojo.getIntent();
+		Assert.assertEquals(intent, "CAPTURE");
+		
+		System.out.println("fetching value of purchaseunitsarraylist");
+		
+		List<purchase_units>lst=showorderpojo.getPurchase_units();
+		for(purchase_units e :lst)
+		{
+		System.out.println("value of ref id is "+e.getReference_id());	
+		System.out.println("value of currency code is "+e.getAmount().getCurrency_code());
+		System.out.println("fetching value of linksarraylist");
+		}
+		
+		List<links> lstlnk= showorderpojo.getLinks();
+		for(links e1:lstlnk)
+		{
+			System.out.println("all values of href"+e1.getHref());
+			if(e1.getRel().equalsIgnoreCase("self"))
+			{
+				System.out.println("fetch values of particular index in arraylist");
+				System.out.println("value of href where rel=self" +e1.getHref());
+				
+			}
+		}
+		
+		}
+	
+	@Test
+	public void parsingthrugroovyscript()
+	{
+		Response showorder_response=showorderresponse();
+		
+		showorder_response
+		.then()
+		.body("intent",equalToIgnoringCase("capture"))
+		.body("purchase_units[0].amount.value", equalTo("100.00"))//when we know the index
+		.body("links.find{it.rel='self'}.method",equalToIgnoringCase("GEt"))//selecting index based on some condition and checking the value in that particular index
+		.body("links.findAll{it.method='GET'}",hasItem(hasValue("approve")) );
+		//get all the variables inside arraylist of index where method=get and then checks if it has an item whose value is approve
+		
+		}
+	@Test
+	public void parsingthruJSONobject()
+	{   //get response
+		Response showorder_response=showorderresponse();
+		//convert it to string
+		String string_response=showorder_response.asString();
+		//convert  string to jsonobject through org.json dependency jar
+		JSONObject jsonobj=new JSONObject(string_response);
+		System.out.println("parsing simple object through json object");
+		System.out.println("value of id thru jsonobject parsing is " +jsonobj.get("id"));
+		System.out.println("value of status thru jsonobject parsing is " +jsonobj.get("status"));
+		System.out.println("parsing complex objects through json object");
+		JSONArray  linkarray=jsonobj.getJSONArray("links");
+		
+		   for( Object e:linkarray)
+		   {
+			   JSONObject jobj = (JSONObject)e;
+			   System.out.println("value of rel through jsonobject is " +jobj.getString("rel") );//without index
+			   if(jobj.getString("method").equalsIgnoreCase("post"))
+			   {
+				   System.out.println("value of rel with index ref through jsonobject is " +jobj.getString("rel") );//without index
+			   }
+		   }
+		   JSONArray purchasearray= jsonobj.getJSONArray("purchase_units");
+		   for(Object e:purchasearray)
+		   { 
+			   JSONObject jobj=(JSONObject)e;
+			   System.out.println("value of ref id thru json object is:" +jobj.get("reference_id"));
+			   System.out.println("value of currency_code thru json object is:" +jobj.getJSONObject("amount").getString("currency_code"));
+			   
+		   }
+		 
+		
+		}
 
 }

@@ -2,20 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6458" started-at="2019-08-15T05:11:29Z" finished-at="2019-08-15T05:11:36Z">
+  <suite name="Default suite" duration-ms="39" started-at="2019-08-15T16:19:24Z" finished-at="2019-08-15T16:19:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6458" started-at="2019-08-15T05:11:29Z" finished-at="2019-08-15T05:11:36Z">
-      <class name="com.paypal.orders.tests.showorder">
-        <test-method status="PASS" signature="showinit()[pri:0, instance:com.paypal.orders.tests.showorder@215be6bb]" name="showinit" is-config="true" duration-ms="5616" started-at="2019-08-15T01:11:29Z" finished-at="2019-08-15T01:11:35Z">
+    <test name="Default test" duration-ms="39" started-at="2019-08-15T16:19:24Z" finished-at="2019-08-15T16:19:25Z">
+      <class name="com.paypal.createorder_resourcebuilder.resourcebuilder">
+        <test-method status="PASS" signature="resourcebuild()[pri:0, instance:com.paypal.createorder_resourcebuilder.resourcebuilder@3c756e4d]" name="resourcebuild" duration-ms="17" started-at="2019-08-15T12:19:24Z" finished-at="2019-08-15T12:19:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- showinit -->
-        <test-method status="PASS" signature="showorderresponse()[pri:0, instance:com.paypal.orders.tests.showorder@215be6bb]" name="showorderresponse" duration-ms="810" started-at="2019-08-15T01:11:35Z" finished-at="2019-08-15T01:11:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- showorderresponse -->
-      </class> <!-- com.paypal.orders.tests.showorder -->
+        </test-method> <!-- resourcebuild -->
+      </class> <!-- com.paypal.createorder_resourcebuilder.resourcebuilder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

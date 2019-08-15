@@ -1,6 +1,6 @@
-package com.paypal.resourcebuilder;
+package com.paypal.showorder_resourcebuilder;
 
-public class Amount {
+public class amount {
 private String currency_code;
 private String value;
 public String getCurrency_code() {

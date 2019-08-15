@@ -1,4 +1,4 @@
-package com.paypal.resourcebuilder;
+package com.paypal.createorder_resourcebuilder;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -62,7 +62,11 @@ public class resourcebuilder {
 		return lst;
 	}
 	
+	
+	//@Test
+    //public void resourcebuild()
 	public post_obj resourcebuild()
+	
 	{
 		List<HashMap<String, String>> lstcsv =readcsvdata(path) ;
 		
@@ -78,6 +82,14 @@ public class resourcebuilder {
 	post_obj po=new post_obj();
 	po.setIntent(lstcsv.get(0).get("intent"));
 	po.setPurchase_units(lst);
+	
+	/*System.out.println("value of intent is :" +po.getIntent());
+	List<Purchase_units> lst1 =po.getPurchase_units();
+	for( Purchase_units e:lst1)
+	{
+		System.out.println("value of currencycode is:" +e.getAmount().getCurrency_code() );
+	}*/
+	
 	
 	return po;
 	

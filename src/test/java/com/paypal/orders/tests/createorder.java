@@ -9,14 +9,15 @@ import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import com.jayway.restassured.specification.ResponseSpecification;
+import com.paypal.createorder_resourcebuilder.post_obj;
+import com.paypal.createorder_resourcebuilder.resourcebuilder;
 import com.paypal.orders.base.TestBase;
-import com.paypal.resourcebuilder.post_obj;
-import com.paypal.resourcebuilder.resourcebuilder;
+
 import static com.jayway.restassured.RestAssured.*;
 
 public class createorder extends TestBase{
 	
-	 RequestSpecification spec;
+	// RequestSpecification spec;
 	  Response createorder_response;
 	
 	public createorder()
@@ -29,11 +30,7 @@ public class createorder extends TestBase{
 	{
 		
 		 accesstoken=accesstoken();
-		 RequestSpecBuilder builder=new RequestSpecBuilder();
-		 builder.setBaseUri(prop.getProperty("baseuri"));
-		 builder.setBasePath(prop.getProperty("basepath"));
-		 builder.setContentType(ContentType.JSON);
-		  spec= builder.build();
+		  spec  =RequestSpecBuilder();
 		 
 		 
 		
@@ -50,9 +47,10 @@ public class createorder extends TestBase{
 		
 		
 		 createorder_response=given()
-		.baseUri(prop.getProperty("baseuri"))
-		.basePath(prop.getProperty("basepath"))
-		.contentType(ContentType.JSON)
+		//.baseUri(prop.getProperty("baseuri"))
+		//.basePath(prop.getProperty("basepath"))
+		//.contentType(ContentType.JSON)
+				 .spec(spec)
 		.auth()
 		.oauth2(accesstoken)
 		.when()

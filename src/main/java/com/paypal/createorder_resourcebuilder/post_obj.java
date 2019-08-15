@@ -1,4 +1,4 @@
-package com.paypal.resourcebuilder;
+package com.paypal.createorder_resourcebuilder;
 
 import java.util.List;
 
