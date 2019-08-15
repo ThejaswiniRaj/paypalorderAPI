@@ -15,9 +15,9 @@ import com.paypal.resourcebuilder.resourcebuilder;
 import static com.jayway.restassured.RestAssured.*;
 
 public class createorder extends TestBase{
-	String accesstoken;
-	RequestSpecification spec;
-	Response createorder_response;
+	
+	 RequestSpecification spec;
+	  Response createorder_response;
 	
 	public createorder()
 	{
@@ -42,7 +42,7 @@ public class createorder extends TestBase{
 	
 	 
 	
-	public Response createorders()
+	public   Response createorders()
 	{
 		resourcebuilder resource=new resourcebuilder();
 		post_obj pojo=resource.resourcebuild();
@@ -50,7 +50,9 @@ public class createorder extends TestBase{
 		
 		
 		 createorder_response=given()
-		.spec(spec)
+		.baseUri(prop.getProperty("baseuri"))
+		.basePath(prop.getProperty("basepath"))
+		.contentType(ContentType.JSON)
 		.auth()
 		.oauth2(accesstoken)
 		.when()

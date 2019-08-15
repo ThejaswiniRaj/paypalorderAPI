@@ -14,7 +14,7 @@ public class showorder extends TestBase {
 	
 	String orderid;
 	RequestSpecification spec;
-	String accesstoken;;
+	 //String accesstoken;
 	
 	
 	
@@ -28,6 +28,7 @@ public class showorder extends TestBase {
 	public void showinit()
 	{
 		accesstoken=accesstoken();
+		
 		createorder co=new createorder();
 		Response createorder_response=co.createorders();
 		 orderid=co.extractid(createorder_response);

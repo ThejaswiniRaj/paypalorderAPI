@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5575" started-at="2019-08-14T15:38:25Z" finished-at="2019-08-14T15:38:30Z">
+  <suite name="Default suite" duration-ms="6458" started-at="2019-08-15T05:11:29Z" finished-at="2019-08-15T05:11:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5575" started-at="2019-08-14T15:38:25Z" finished-at="2019-08-14T15:38:30Z">
-      <class name="com.paypal.orders.tests.createorder">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="initialization" is-config="true" duration-ms="3673" started-at="2019-08-14T11:38:25Z" finished-at="2019-08-14T11:38:29Z">
+    <test name="Default test" duration-ms="6458" started-at="2019-08-15T05:11:29Z" finished-at="2019-08-15T05:11:36Z">
+      <class name="com.paypal.orders.tests.showorder">
+        <test-method status="PASS" signature="showinit()[pri:0, instance:com.paypal.orders.tests.showorder@215be6bb]" name="showinit" is-config="true" duration-ms="5616" started-at="2019-08-15T01:11:29Z" finished-at="2019-08-15T01:11:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="createorderassertion()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="createorderassertion" duration-ms="1881" started-at="2019-08-14T11:38:29Z" finished-at="2019-08-14T11:38:30Z">
+        </test-method> <!-- showinit -->
+        <test-method status="PASS" signature="showorderresponse()[pri:0, instance:com.paypal.orders.tests.showorder@215be6bb]" name="showorderresponse" duration-ms="810" started-at="2019-08-15T01:11:35Z" finished-at="2019-08-15T01:11:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createorderassertion -->
-      </class> <!-- com.paypal.orders.tests.createorder -->
+        </test-method> <!-- showorderresponse -->
+      </class> <!-- com.paypal.orders.tests.showorder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

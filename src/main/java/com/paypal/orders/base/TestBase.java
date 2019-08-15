@@ -16,6 +16,7 @@ public class TestBase {
 	
 	String path="C:\\jansi_javafiles_2\\paypal_practice\\src\\main\\java\\com\\paypal\\properties\\client.properties";
 	public Properties prop;
+	public static String accesstoken;
 	
 	
 	
@@ -48,7 +49,7 @@ public class TestBase {
 	public String accesstoken()
 	{
 		
-		String accesstoken=given()
+		 accesstoken=given()
 		.param("grant_type", "client_credentials")
 		.auth()
 		.preemptive()
