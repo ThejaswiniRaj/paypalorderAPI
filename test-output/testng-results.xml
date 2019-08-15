@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5786" started-at="2019-08-14T03:54:51Z" finished-at="2019-08-14T03:54:57Z">
+  <suite name="suite" duration-ms="5687" started-at="2019-08-15T03:40:07Z" finished-at="2019-08-15T03:40:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5786" started-at="2019-08-14T03:54:51Z" finished-at="2019-08-14T03:54:57Z">
+    <test name="paypal practice test case tests" duration-ms="5687" started-at="2019-08-15T03:40:07Z" finished-at="2019-08-15T03:40:13Z">
       <class name="com.paypal.orders.tests.createorder">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="init" is-config="true" duration-ms="8" started-at="2019-08-13T23:54:51Z" finished-at="2019-08-13T23:54:51Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="init" is-config="true" duration-ms="20" started-at="2019-08-14T23:40:07Z" finished-at="2019-08-14T23:40:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="initialization" is-config="true" duration-ms="3819" started-at="2019-08-13T23:54:51Z" finished-at="2019-08-13T23:54:55Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="initialization" is-config="true" duration-ms="3775" started-at="2019-08-14T23:40:07Z" finished-at="2019-08-14T23:40:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="assertion()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="assertion" duration-ms="1938" started-at="2019-08-13T23:54:55Z" finished-at="2019-08-13T23:54:57Z">
+        <test-method status="PASS" signature="assertion()[pri:0, instance:com.paypal.orders.tests.createorder@7f9a81e8]" name="assertion" duration-ms="1874" started-at="2019-08-14T23:40:11Z" finished-at="2019-08-14T23:40:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- assertion -->
       </class> <!-- com.paypal.orders.tests.createorder -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- paypal practice test case tests -->
+  </suite> <!-- suite -->
 </testng-results>

@@ -1,0 +1,5 @@
+com\paypal\resourcebuilder\Amount.class
+com\paypal\resourcebuilder\Purchase_units.class
+com\paypal\resourcebuilder\post_obj.class
+com\paypal\resourcebuilder\resourcebuilder.class
+com\paypal\orders\base\TestBase.class
