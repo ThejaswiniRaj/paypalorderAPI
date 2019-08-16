@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39" started-at="2019-08-15T16:19:24Z" finished-at="2019-08-15T16:19:25Z">
+  <suite name="Default suite" duration-ms="11770" started-at="2019-08-16T04:24:34Z" finished-at="2019-08-16T04:24:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39" started-at="2019-08-15T16:19:24Z" finished-at="2019-08-15T16:19:25Z">
-      <class name="com.paypal.createorder_resourcebuilder.resourcebuilder">
-        <test-method status="PASS" signature="resourcebuild()[pri:0, instance:com.paypal.createorder_resourcebuilder.resourcebuilder@3c756e4d]" name="resourcebuild" duration-ms="17" started-at="2019-08-15T12:19:24Z" finished-at="2019-08-15T12:19:25Z">
+    <test name="Default test" duration-ms="11770" started-at="2019-08-16T04:24:34Z" finished-at="2019-08-16T04:24:46Z">
+      <class name="com.paypal.orders.tests.showorder">
+        <test-method status="PASS" signature="showinit()[pri:0, instance:com.paypal.orders.tests.showorder@5419f379]" name="showinit" is-config="true" duration-ms="5667" started-at="2019-08-16T00:24:34Z" finished-at="2019-08-16T00:24:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- resourcebuild -->
-      </class> <!-- com.paypal.createorder_resourcebuilder.resourcebuilder -->
+        </test-method> <!-- showinit -->
+        <test-method status="PASS" signature="parsingthruJSONobject()[pri:0, instance:com.paypal.orders.tests.showorder@5419f379]" name="parsingthruJSONobject" duration-ms="618" started-at="2019-08-16T00:24:40Z" finished-at="2019-08-16T00:24:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parsingthruJSONobject -->
+        <test-method status="PASS" signature="showinit()[pri:0, instance:com.paypal.orders.tests.showorder@5419f379]" name="showinit" is-config="true" duration-ms="1873" started-at="2019-08-16T00:24:41Z" finished-at="2019-08-16T00:24:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showinit -->
+        <test-method status="PASS" signature="parsingthrugroovyscript()[pri:0, instance:com.paypal.orders.tests.showorder@5419f379]" name="parsingthrugroovyscript" duration-ms="863" started-at="2019-08-16T00:24:42Z" finished-at="2019-08-16T00:24:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parsingthrugroovyscript -->
+        <test-method status="PASS" signature="showinit()[pri:0, instance:com.paypal.orders.tests.showorder@5419f379]" name="showinit" is-config="true" duration-ms="1934" started-at="2019-08-16T00:24:43Z" finished-at="2019-08-16T00:24:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- showinit -->
+        <test-method status="PASS" signature="parsingthrumappingtoclass()[pri:0, instance:com.paypal.orders.tests.showorder@5419f379]" name="parsingthrumappingtoclass" duration-ms="791" started-at="2019-08-16T00:24:45Z" finished-at="2019-08-16T00:24:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parsingthrumappingtoclass -->
+      </class> <!-- com.paypal.orders.tests.showorder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

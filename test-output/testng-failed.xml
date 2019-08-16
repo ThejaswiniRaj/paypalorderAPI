@@ -7,8 +7,6 @@
         <methods>
           <include name="showinit"/>
           <include name="parsingthrugroovyscript"/>
-          <include name="parsingthruJSONobject"/>
-          <include name="parsingthrumappingtoclass"/>
         </methods>
       </class> <!-- com.paypal.orders.tests.showorder -->
     </classes>

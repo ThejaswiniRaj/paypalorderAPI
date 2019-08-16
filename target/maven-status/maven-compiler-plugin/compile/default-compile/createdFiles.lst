@@ -1,5 +1,10 @@
-com\paypal\resourcebuilder\Amount.class
-com\paypal\resourcebuilder\Purchase_units.class
-com\paypal\resourcebuilder\post_obj.class
-com\paypal\resourcebuilder\resourcebuilder.class
+com\paypal\createorder_resourcebuilder\Amount.class
+com\paypal\createorder_resourcebuilder\post_obj.class
+com\paypal\showorder_resourcebuilder\amount.class
 com\paypal\orders\base\TestBase.class
+com\paypal\showorder_resourcebuilder\links.class
+com\paypal\showorder_resourcebuilder\purchase_units.class
+com\paypal\showorder_resourcebuilder\payee.class
+com\paypal\createorder_resourcebuilder\Purchase_units.class
+com\paypal\createorder_resourcebuilder\resourcebuilder.class
+com\paypal\showorder_resourcebuilder\showorder_obj.class
