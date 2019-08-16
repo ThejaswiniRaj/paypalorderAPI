@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="3.623" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="4.892" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="JOB_NAME" value="paypalpractice"/>
@@ -27,9 +27,10 @@
     <property name="ProgramFiles" value="C:\Program Files (x86)"/>
     <property name="user.language" value="en"/>
     <property name="JOB_BASE_NAME" value="paypalpractice"/>
-    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/paypalpractice/16/display/redirect?page=changes"/>
-    <property name="BUILD_DISPLAY_NAME" value="#16"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:8080/job/paypalpractice/17/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#17"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
+    <property name="GIT_PREVIOUS_SUCCESSFUL_COMMIT" value="71ed98b01bfc8bac07d9abe48eeca60e73f8b4ee"/>
     <property name="LOCALAPPDATA" value="C:\WINDOWS\system32\config\systemprofile\AppData\Local"/>
     <property name="java.version" value="1.8.0_171"/>
     <property name="PROCESSOR_LEVEL" value="6"/>
@@ -39,7 +40,7 @@
     <property name="NODE_NAME" value="master"/>
     <property name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_171\jre\lib\endorsed"/>
-    <property name="BUILD_ID" value="16"/>
+    <property name="BUILD_ID" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="file.encoding.pkg" value="sun.io"/>
@@ -54,12 +55,13 @@
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="os.version" value="10.0"/>
-    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/paypalpractice/16/display/redirect"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:8080/job/paypalpractice/17/display/redirect"/>
     <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
     <property name="TMP" value="C:\WINDOWS\TEMP"/>
     <property name="path.separator" value=";"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="user.variant" value=""/>
+    <property name="GIT_PREVIOUS_COMMIT" value="71ed98b01bfc8bac07d9abe48eeca60e73f8b4ee"/>
     <property name="JOB_DISPLAY_URL" value="http://localhost:8080/job/paypalpractice/display/redirect"/>
     <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -72,12 +74,12 @@
     <property name="POM_PACKAGING" value="jar"/>
     <property name="asl.log" value="Destination=file"/>
     <property name="user.script" value=""/>
-    <property name="SERVICE_ID" value="Jenkins"/>
     <property name="COMPUTERNAME" value="RJ"/>
+    <property name="SERVICE_ID" value="Jenkins"/>
     <property name="POM_GROUPID" value="paypal_practice"/>
     <property name="user.home" value="C:\WINDOWS\system32\config\systemprofile"/>
     <property name="PUBLIC" value="C:\Users\Public"/>
-    <property name="BUILD_TAG" value="jenkins-paypalpractice-16"/>
+    <property name="BUILD_TAG" value="jenkins-paypalpractice-17"/>
     <property name="JENKINS_SERVER_COOKIE" value="bb383062194cdcf4"/>
     <property name="HUDSON_URL" value="http://localhost:8080/"/>
     <property name="ProgramData" value="C:\ProgramData"/>
@@ -91,7 +93,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="maven.home" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project"/>
     <property name="java.class.path" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.13.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project\boot\plexus-classworlds-2.6.0.jar;C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project/conf/logging"/>
-    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.29.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.13.jar 51699"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-3.29.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.13.jar 51862"/>
     <property name="Path" value="C:\Program Files\Java\jdk1.8.0_171/bin;C:\app\Raj\product\18.0.0\dbhomeXE\bin;C:\app\Raj\virtual\product\12.2.0\dbhome_2\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\jansi_webdrivers\apache-maven-3.6.0\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\Raj\AppData\Local\Android\Sdk\platform-tools;C:\Users\Raj\AppData\Local\Android\Sdk\tools;C:\Users\Raj\AppData\Local\Android\Sdk\tools\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="PROCESSOR_ARCHITECTURE" value="x86"/>
@@ -106,7 +108,7 @@
     <property name="HUDSON_HOME" value="C:\Program Files (x86)\Jenkins"/>
     <property name="PATH+MAVEN" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project/bin"/>
     <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
-    <property name="BUILD_URL" value="http://localhost:8080/job/paypalpractice/16/"/>
+    <property name="BUILD_URL" value="http://localhost:8080/job/paypalpractice/17/"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
@@ -118,7 +120,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="MAVEN_HOME" value="C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\paypal_project"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="BUILD_NUMBER" value="16"/>
+    <property name="BUILD_NUMBER" value="17"/>
     <property name="BASE" value="C:\Program Files (x86)\Jenkins"/>
     <property name="ANDROID_HOME" value="C:\Users\Raj\AppData\Local\Android\Sdk"/>
     <property name="JENKINS_URL" value="http://localhost:8080/"/>
@@ -126,7 +128,7 @@
     <property name="GIT_BRANCH" value="origin/mini-master"/>
     <property name="ProgramW6432" value="C:\Program Files"/>
     <property name="windir" value="C:\WINDOWS"/>
-    <property name="GIT_COMMIT" value="71ed98b01bfc8bac07d9abe48eeca60e73f8b4ee"/>
+    <property name="GIT_COMMIT" value="82bde1f05c7a205571324abc1e1b58423601df72"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="SystemDrive" value="C:"/>
     <property name="maven3.interceptor" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar"/>
@@ -138,5 +140,5 @@
     <property name="DriverData" value="C:\Windows\System32\Drivers\DriverData"/>
     <property name="GIT_URL" value="https://github.com/ThejaswiniRaj/paypalorderAPI"/>
   </properties>
-  <testcase name="createorderassertion" classname="com.paypal.orders.tests.createorder" time="3.623"/>
+  <testcase name="createorderassertion" classname="com.paypal.orders.tests.createorder" time="4.892"/>
 </testsuite>

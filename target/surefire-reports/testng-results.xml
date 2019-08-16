@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="paypal practice suite" duration-ms="18090" started-at="2019-08-16T14:23:10Z" finished-at="2019-08-16T14:23:28Z">
+  <suite name="paypal practice suite" duration-ms="9950" started-at="2019-08-16T14:27:57Z" finished-at="2019-08-16T14:28:07Z">
     <groups>
     </groups>
-    <test name="paypal practice test case tests" duration-ms="18090" started-at="2019-08-16T14:23:10Z" finished-at="2019-08-16T14:23:28Z">
+    <test name="paypal practice test case tests" duration-ms="9950" started-at="2019-08-16T14:27:57Z" finished-at="2019-08-16T14:28:07Z">
       <class name="com.paypal.orders.tests.createorder">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.paypal.orders.tests.createorder@7d417077]" name="initialization" is-config="true" duration-ms="14449" started-at="2019-08-16T10:23:10Z" finished-at="2019-08-16T10:23:25Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.paypal.orders.tests.createorder@7d417077]" name="initialization" is-config="true" duration-ms="5041" started-at="2019-08-16T10:27:57Z" finished-at="2019-08-16T10:28:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="createorderassertion()[pri:0, instance:com.paypal.orders.tests.createorder@7d417077]" name="createorderassertion" duration-ms="3623" started-at="2019-08-16T10:23:25Z" finished-at="2019-08-16T10:23:28Z">
+        <test-method status="PASS" signature="createorderassertion()[pri:0, instance:com.paypal.orders.tests.createorder@7d417077]" name="createorderassertion" duration-ms="4894" started-at="2019-08-16T10:28:02Z" finished-at="2019-08-16T10:28:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createorderassertion -->
